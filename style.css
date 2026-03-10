@@ -6,6 +6,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main {
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
 header {
   text-align: center;
 }
@@ -22,7 +27,7 @@ section {
 #changelog-container {
   display: grid;
   grid-auto-flow: column;
-  grid-template: 55px / 100px 50px 1fr;
+  grid-template: auto / 100px 50px 1fr;
   align-items: center;
   grid-auto-rows: 55px;
   padding: 20px;
@@ -34,8 +39,10 @@ section {
 }
 
 .dot-area {
+  position: relative;
   text-align: center;
   grid-column: 2 / 3;
+  height: 100%;
 }
 
 .dot {
@@ -44,8 +51,21 @@ section {
   width: 15px;
   border-radius: 50%;
   background-color: #1d1d1d;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 2px;
+  background-color: #1d1d1d;
+  transform: translate(-50%);
 }
 
 .change-area {
   grid-column: 3 / 4;
+  padding: 20px;
 }
