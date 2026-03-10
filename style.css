@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin: 15px;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+}
+
+#changelog-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: 55px / 100px 50px 1fr;
+  align-items: center;
+  grid-auto-rows: 55px;
+  padding: 20px;
+}
+
+.date-area {
+  text-align: right;
+  grid-column: 1 / 2;
+}
+
+.dot-area {
+  text-align: center;
+  grid-column: 2 / 3;
+}
+
+.dot {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #1d1d1d;
+}
+
+.change-area {
+  grid-column: 3 / 4;
+}
