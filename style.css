@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+:root {
+  --dark-color: #1d1d1d;
+  --hover: #2b2b2b;
+  --light-color: #9b9b9b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +15,8 @@
 main {
   margin: 30px auto;
   width: 85vw;
-  border: 3px solid black;
+  max-width: 850px;
+  border: 3px solid var(--dark-color);
   border-radius: 20px;
 }
 
@@ -19,6 +26,10 @@ header {
 
 h1 {
   margin: 15px;
+}
+
+header > p {
+  color: var(--light-color);
 }
 
 #changelog-area {
@@ -35,6 +46,8 @@ h1 {
   flex: 0 0 100px;
   align-self: center;
   text-align: right;
+  color: var(--light-color);
+  font-weight: bold;
 }
 
 .dot-area {
@@ -50,7 +63,7 @@ h1 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #1d1d1d;
+  background-color: var(--dark-color);
   transform: translate(-50%, -50%);
 }
 
@@ -60,11 +73,33 @@ h1 {
   left: 50%;
   width: 2px;
   height: 100%;
-  background-color: #1d1d1d;
+  background-color: var(--dark-color);
   transform: translate(-50%);
 }
 
 .change-area {
   align-self: center;
   padding: 10px;
+}
+
+#button-area {
+  text-align: center;
+  margin: 15px;
+}
+
+#button-area > a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  color: white;
+  background-color: var(--dark-color);
+  transition: all 0.2s;
+}
+
+#button-area > a:hover {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
 }
