@@ -7,6 +7,8 @@
 }
 
 main {
+  margin: 30px auto;
+  width: 85vw;
   border: 3px solid black;
   border-radius: 20px;
 }
@@ -19,53 +21,50 @@ h1 {
   margin: 15px;
 }
 
-section {
-  max-width: 900px;
-  margin: auto;
+#changelog-area {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 40px 20px;
 }
 
-#changelog-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template: auto / 100px 50px 1fr;
-  align-items: center;
-  grid-auto-rows: 55px;
-  padding: 20px;
+.item {
+  display: flex;
 }
 
 .date-area {
+  flex: 0 0 100px;
+  align-self: center;
   text-align: right;
-  grid-column: 1 / 2;
 }
 
 .dot-area {
   position: relative;
-  text-align: center;
-  grid-column: 2 / 3;
-  height: 100%;
+  flex: 0 0 70px;
 }
 
 .dot {
+  position: absolute;
   display: inline-block;
-  height: 15px;
+  top: 50%;
+  left: 50%;
   width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: #1d1d1d;
-  position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .line {
   position: absolute;
   display: inline-block;
-  height: 100%;
+  left: 50%;
   width: 2px;
+  height: 100%;
   background-color: #1d1d1d;
   transform: translate(-50%);
 }
 
 .change-area {
-  grid-column: 3 / 4;
-  padding: 20px;
+  align-self: center;
+  padding: 10px;
 }
